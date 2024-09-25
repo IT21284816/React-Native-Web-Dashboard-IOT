@@ -28,7 +28,7 @@ export default function App() {
 
   useEffect(() => {
     // Fetch steps data from Firebase
-    const stepsRef = ref(database, 'steps');
+    const stepsRef = ref(database, 'stepCount');
     onValue(stepsRef, (snapshot) => {
       const stepsValue = snapshot.val();
       setSteps(stepsValue);
