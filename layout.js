@@ -1,11 +1,11 @@
 // Layout.js
 import React from 'react';
-import { View, Text, StyleSheet, StatusBar, TouchableOpacity  } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity  } from 'react-native';
 
 const Layout = ({ children, onExit }) => {
   return (
     <View style={styles.container}>
-        <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+        
       <View style={styles.header}>
         <Text style={styles.headerText}>Step Count</Text>
         <TouchableOpacity onPress={onExit} style={styles.exitButton}>
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f0f0f0',
+    marginTop:25,
   },
   header: {
     backgroundColor: '#0078e5',
