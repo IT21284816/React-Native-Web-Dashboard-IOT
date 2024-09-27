@@ -1,11 +1,12 @@
 // App.js
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View,  Alert, BackHandler } from 'react-native';
+import { StyleSheet, Text, View,  Alert, BackHandler ,ImageBackground } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Splash from './components/Splash'; // Import the Splash component
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
 import Layout from './layout';
+import backgroundImage from './assets/background.jpg'; 
 
 // Your Firebase config
 const firebaseConfig = {
@@ -52,10 +53,15 @@ export default function App() {
 
   return (
     <Layout onExit={handleExit}>
+      <ImageBackground
+        source={backgroundImage} // Use the imported image
+        style={styles.background}
+      >
     <View style={styles.container}>
       <Text style={styles.text}>Steps: {steps ? steps : 'Loading...'}</Text>
       <StatusBar style="auto" />
     </View>
+    </ImageBackground>
    </Layout>
   );
 }
@@ -63,12 +69,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    fontSize: 24,
+    fontSize: 30,
     marginBottom: 10,
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
+
+  },
+  background: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
