@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View,  Alert, BackHandler ,ImageBackground } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Splash from './components/Splash'; // Import the Splash component
+import Splash from './components/Splash';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
 import Layout from './layout';
