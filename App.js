@@ -7,6 +7,8 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
 import Layout from './layout';
 import backgroundImage from './assets/background.jpg'; 
+import RadialGauge from './components/RadialGauge';
+import MetricsDisplay from './components/MetricsDisplay';
 
 // Your Firebase config
 const firebaseConfig = {
@@ -59,6 +61,8 @@ export default function App() {
       >
     <View style={styles.container}>
       <Text style={styles.text}>Steps: {steps ? steps : 'Loading...'}</Text>
+      <RadialGauge steps={steps || 0} />
+      <MetricsDisplay steps={steps || 0} />    
       <StatusBar style="auto" />
     </View>
     </ImageBackground>
@@ -75,10 +79,17 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 30,
-    marginBottom: 10,
-    backgroundColor: 'white',
-    padding: 20,
-    borderRadius: 10,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    color: 'white',
+    padding: 30,
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 5,
 
   },
   background: {

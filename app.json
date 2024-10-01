@@ -24,11 +24,14 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "owner": "duhun",
     "extra": {
       "eas": {
-        "projectId": "472e6107-d679-4f85-a29a-276ce08e9d44"
+        "projectId": "ac6cbadc-6186-4ae0-b690-0af8ab2d260e"
       }
     },
-    "owner": "duhun"
+    "plugins": [
+      "expo-font"
+    ]
   }
 }

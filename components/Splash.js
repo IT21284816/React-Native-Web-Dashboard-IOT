@@ -29,13 +29,14 @@ const Splash = ({ onAnimationComplete }) => {
 const styles = StyleSheet.create({
   splashContainer: {
     flex: 1,
-    backgroundColor: 'yellow',
+    backgroundColor: '#002147',
     alignItems: 'center',
     justifyContent: 'center',
   },
   splashText: {
     fontSize: 24,
     fontWeight: 'bold',
+    color:'white'
   },
 });
 

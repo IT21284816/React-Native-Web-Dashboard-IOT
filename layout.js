@@ -1,6 +1,7 @@
 // Layout.js
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity  } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Layout = ({ children, onExit }) => {
   return (
@@ -9,7 +10,7 @@ const Layout = ({ children, onExit }) => {
       <View style={styles.header}>
         <Text style={styles.headerText}>Step Count</Text>
         <TouchableOpacity onPress={onExit} style={styles.exitButton}>
-          <Text style={styles.exitButtonText}>Exit</Text>
+          <Icon name="times" size={24} color="white" />
         </TouchableOpacity>
       </View>
       <View style={styles.content}>
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     marginTop:20,
   },
   header: {
-    backgroundColor: '#0078e5',
+    backgroundColor: '#002147',
     paddingVertical: 20,
     paddingHorizontal: 20,
     flexDirection: 'row', 

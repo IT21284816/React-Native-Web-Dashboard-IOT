@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "my-iot-app",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
@@ -10,20 +10,23 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.3",
-    "expo": "~51.0.28",
-    "expo-dev-client": "~4.0.26",
+    "expo": "^51.0.0",
+    "expo-dev-client": "~4.0.27",
+    "expo-font": "~12.0.10",
     "expo-status-bar": "~1.12.1",
     "firebase": "^10.13.2",
-    "my-app": "file:",
+    "my-iot-app": "file:",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.5",
-    "react-native-circular-progress": "^1.4.0",
-    "react-native-svg": "^15.7.1",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-svg": "15.2.0",
+    "react-native-svg-charts": "^5.4.0",
+    "react-native-vector-icons": "^10.2.0",
     "react-native-web": "~0.19.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.24.0"
   },
   "private": true
 }
