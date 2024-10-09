@@ -25,3 +25,6 @@ To deploy this project run
   npm start
 ```
 
+![image](https://github.com/user-attachments/assets/1b70166e-abff-438e-9625-4553dd164bc8)
+
+
